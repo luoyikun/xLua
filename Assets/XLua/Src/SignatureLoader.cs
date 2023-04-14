@@ -5,6 +5,8 @@ using Windows.Security.Cryptography;
 using Windows.Security.Cryptography.Core;
 #endif
 using System;
+using System.Text;
+using UnityEngine;
 
 namespace XLua
 {
@@ -61,6 +63,8 @@ namespace XLua
                 throw new InvalidProgramException(filepath + " has invalid signature!");
             }
 #endif
+            string str = Encoding.UTF8.GetString(filecontent);
+            Debug.Log(str);
             return filecontent;
         }
 

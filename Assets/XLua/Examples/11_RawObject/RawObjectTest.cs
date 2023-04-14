@@ -16,6 +16,8 @@ namespace XLuaTest
             LuaEnv luaenv = new LuaEnv();
             //直接传1234到一个object参数，xLua将选择能保留最大精度的long来传递
             luaenv.DoString("CS.XLuaTest.RawObjectTest.PrintType(1234)");
+            //直接传1234到一个object参数，float
+            luaenv.DoString("CS.XLuaTest.RawObjectTest.PrintType(1234.567)");
             //通过一个继承RawObject的类，能实现指明以一个int来传递
             luaenv.DoString("CS.XLuaTest.RawObjectTest.PrintType(CS.XLua.Cast.Int32(1234))");
             luaenv.Dispose();

@@ -16,6 +16,7 @@ using XLua;
 //配置的详细介绍请看Doc下《XLua的配置.doc》
 public static class ExampleGenConfig
 {
+    
     //lua中要使用到C#库的配置，比如C#标准库，或者Unity API，第三方库等。
     [LuaCallCSharp]
     public static List<Type> LuaCallCSharp = new List<Type>() {
@@ -51,7 +52,7 @@ public static class ExampleGenConfig
                 typeof(UnityEngine.Debug)
             };
 
-    //C#静态调用Lua的配置（包括事件的原型），仅可以配delegate，interface
+    //C#静态调用Lua的配置（包括事件的原型），仅可以配delegate，interface。这里不需要引用，静态变量一开始就分配了
     [CSharpCallLua]
     public static List<Type> CSharpCallLua = new List<Type>() {
                 typeof(Action),

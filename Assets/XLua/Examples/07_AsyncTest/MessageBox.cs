@@ -15,6 +15,7 @@ using UnityEngine.Events;
 
 namespace XLuaTest
 {
+    [LuaCallCSharp]
     public class MessageBox : MonoBehaviour
     {
 
